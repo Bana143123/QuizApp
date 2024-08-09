@@ -1,0 +1,67 @@
+/* Common styles for both login and register containers */
+.login-container, .register-container {
+    width: 350px; /* Increased width */
+    margin: 100px auto;
+    padding: 40px; /* Increased padding */
+    background-color: #f7f7f7;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Slightly more shadow */
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px; /* Increased margin */
+    color: #333;
+    font-size: 24px; /* Larger font size */
+}
+
+.input-group {
+    margin-bottom: 20px; /* Increased margin */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px; /* Slightly larger font size */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px; /* Increased padding */
+    font-size: 16px; /* Increased font size */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px; /* Slightly larger button */
+    background-color: #4CAF50;
+    color: blueviolet;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.error, .success {
+    margin-top: 15px; /* Increased margin */
+    text-align: center;
+    font-size: 14px; /* Slightly larger font size */
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}

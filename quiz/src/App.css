@@ -1,0 +1,135 @@
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-container button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-container button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.quiz-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.question-section {
+  margin-bottom: 20px;
+}
+
+.question-count {
+  font-weight: bold;
+}
+
+.question-text {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.timer-section {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.answer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.answer-section button {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.answer-section button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.score-section {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.feedback-section {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.feedback-section p {
+  margin: 0;
+}
+
+button {
+  outline: none;
+}
+h1{
+  color: brown;
+}
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-container button {
+  padding: 10
+}
