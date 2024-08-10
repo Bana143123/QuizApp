@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify
 import sqlite3
 import os
-
+from flask_cors import CORS
 app = Flask(__name__)
-
+CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all origins
 def connect_db():
     db_path = os.path.abspath('instance/users.db')
     print(f"Database path: {db_path}")
@@ -36,7 +36,10 @@ def update_user():
 
 @app.route('/login', methods=['POST'])
 def login():
+    # data = {"username" : "Narendra",
+            # "password" : "1234"}
     data = request.get_json()
+    print(data)
     username = data.get('username')
     password = data.get('password')
     
