@@ -4,17 +4,30 @@ import axios from 'axios';
 const Login = ({ onLogin }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
     const handleLogin = async (e) => {
         e.preventDefault();
+        setError(''); // Reset error message
 
         try {
-            const response = await axios.post('http://localhost:3000/login', { username, password });
+            console.log('Sending login request with:', { username, password }); // Debugging log
+
+            const response = await axios.post('http://localhost:8081/login', { username, password }, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            console.log('Response:', response); // Debugging log
             if (response.status === 200) {
-                onLogin();  // Calls a function to show the quiz tabs if login is successful
+                onLogin();  
+                alert("Login Successful"); // Notify successful login
             }
         } catch (error) {
-            alert('Invalid credentials');
+            // Log detailed error information
+            console.error('Login error:', error.response ? error.response.data : error.message);
+            setError('Invalid credentials'); // Set error message to be displayed
         }
     };
 
@@ -22,6 +35,7 @@ const Login = ({ onLogin }) => {
         <div className="login-container">
             <form onSubmit={handleLogin}>
                 <h2>Login</h2>
+                {error && <div className="error-message">{error}</div>} {/* Display error message */}
                 <div className="input-group">
                     <label htmlFor="username">Username</label>
                     <input
